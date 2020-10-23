@@ -1,0 +1,41 @@
+name: The Practical Dev
+version: 1.0.0
+description: Optionally publishes articles on your dev.to-account.
+author: Sebastian Schürmanns
+homepage: https://trendschau.net
+licence: MIT
+paypal: https://paypal.me/typemill
+amount: 5
+
+forms:
+  fields:
+
+    apikey:
+      type: text
+      label: Your API-key from dev.to
+      description: Go to https://dev.to/settings/account to generate an API-Key
+
+metatabs:
+  devto:
+    fields:
+      crosspost:
+        type: checkbox
+        label: Crosspost
+        checkboxlabel: Crosspost this article on dev.to
+      status:
+        type: radio
+        label: Status of the article on dev.to
+        required: required
+        options:
+          published: published
+          draft: draft
+      tags:
+        type: text
+        label: Tags (comma-separated list)        
+      series:
+        type: text
+        label: Series
+      response:
+        type: textarea
+        label: Response from dev.to (readonly)
+        readonly: readonly
